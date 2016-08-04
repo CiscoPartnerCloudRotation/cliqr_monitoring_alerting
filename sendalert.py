@@ -10,8 +10,8 @@ def send_email_alert(msg):
     Password = base64.b64decode("Z2xvY2sxNzIz")
     server = smtplib.SMTP('smtp.1and1.com')
     server.starttls()
-    server.set_debuglevel(1)
-    server.ehlo_or_helo_if_needed()
+    #server.set_debuglevel(1)
+    #server.ehlo_or_helo_if_needed()
 
     message = """From: %s
     To: %s
@@ -22,10 +22,10 @@ def send_email_alert(msg):
 
     server.login("hunter@mykcrew.net",Password)
     server.sendmail(sender, receiver, message)
-    print smtplib.SMTPAuthenticationError
-    print smtplib.SMTPConnectError
-    print smtplib.SMTPException
-    print smtplib.SMTPHeloError
+    #print smtplib.SMTPAuthenticationError
+    #print smtplib.SMTPConnectError
+    #print smtplib.SMTPException
+    #print smtplib.SMTPHeloError
     server.quit()
 
 
