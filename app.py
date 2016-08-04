@@ -2,6 +2,10 @@ import requests
 import json
 import ast
 # -- Possible status values are JobRunning, JobFinished, JobStopped, JobError, NodeStarting, NodeReady, NodeTerminated --
+# Testing:
+# 1. Run test_server.py in the background
+# 2. Job list endpoints: http://127.0.0.1:5000/v1/jobs
+# 3. Test job endpoints: http://127.0.0.1:5000/v1/jobs/1768
 
 def get_all_jobs():
     r = requests.get('http://127.0.0.1:5000/v1/jobs')
